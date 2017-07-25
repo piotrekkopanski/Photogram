@@ -1,0 +1,9 @@
+module NotificationsHelper
+   def read_tag
+         if self.read == false
+              "NOT READ"
+         else
+              "read"
+     end
+    end
+end

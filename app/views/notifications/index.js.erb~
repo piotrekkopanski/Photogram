@@ -1,0 +1,9 @@
+$('#notifications1').append("<%= escape_javascript(render @notifications.where(read: true))%>");
+$('#paginator1').html("<%= escape_javascript(link_to_next_page(@notifications, 'LOAD MORE1', remote: true, id: 'load_more1'))%>");
+if (!$('#load_more1').length) { $('#paginator1').remove(); }
+
+$('#notifications2').append("<%= escape_javascript(render @notifications.where(read: false))%>");
+$('#paginator2').html("<%= escape_javascript(link_to_next_page(@notifications, 'LOAD MORE2', remote: true, id: 'load_more2'))%>");
+if (!$('#load_more2').length) { $('#paginator2').remove(); }
+
+
